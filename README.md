@@ -22,6 +22,27 @@ directory.
 Files which have not been accessed within a fixed time period are marked
 with an asterisk.
 
+# Example
+```
+$ bigfiles .
+51 files processed: total size = 212181
+     26479   Jul 25 18:42:57 2014 * ./old/SCCS/s.myapp.c
+     21288   Jul 25 18:42:57 2014 * ./old/myapp2
+     19496   Dec 20 14:28:27 2018   ./myapp
+     19340   Dec 20 10:40:54 2018   ./old/myapp1
+     16537   Dec 20 14:30:50 2018   ./myapp.c
+     15776   Jul 25 18:42:57 2014 * ./old/myapp
+     12829   Jul 25 18:42:57 2014 * ./old/myapp.h
+     12790   Jul 25 18:42:57 2014 * ./old/myapp.c
+     12628   Jul 25 18:42:57 2014 * ./old/myapp1.c
+      7148   Dec 20 14:28:34 2018   ./myapp.zip
+      5680   Dec 20 14:28:14 2018   ./myapp.tar.gz
+      5258   Dec 20 14:31:24 2018   ./myapp.db
+      4993   Dec 20 14:29:43 2018   ./myapp2.db
+      4898   Dec 20 14:29:13 2018   ./.git/hooks/pre-rebase.sample
+      4337   Jul 25 18:42:57 2014 * ./old/SCCS/s.myapp.1
+```
+
 # Options
 
 
