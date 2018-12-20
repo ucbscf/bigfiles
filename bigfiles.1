@@ -1,0 +1,76 @@
+.TH BIGFILES 1 "16 Jun 1994"
+.UC
+.SH NAME 
+bigfiles \- find big files in a directory
+.SH SYNOPSIS
+.B bigfiles
+[
+.BI \-d "days"
+] [
+.BI \-n "num"
+] [
+.B \-q
+] [
+.BI \-u "[uid|name]"
+] [
+.B \-x
+] [
+.B \-v
+] [ directory ]
+.SH DESCRIPTION
+.I Bigfiles
+recursively searches a directory for big files.
+It prints the total number of files encountered; the total
+space in bytes which the files occupy; and the
+names, sizes, and  modification dates of the \fInum\fR largest
+files encountered (default is 15).  
+If no directory is specified and the \fB\-q\fR flag is not set, 
+\fBbigfiles\fR searches the current directory.
+.LP
+Files which have not been accessed within a fixed time period
+are marked with an asterisk (``*'').
+.SH OPTIONS
+.TP
+.BI \-d "days" 
+Mark, with an asterisk, the names of files which have not been accessed
+in \fIdays\fR days.  The default value for \fIdays\fR is 30.
+.TP
+.BI \-n "num"
+Print the names of the largest \fInum\fR files found.  The default
+value for \fInum\fR is 15.
+.TP
+.B \-q
+Display any applicable disk quota which is in effect for the user's
+home directory, and report the total size of the files encountered
+as a percent of this total.  When the \fB-q\fR flag is used, searches
+for files always start at the home directory of the user running
+the program, even if some other directory name is given on the 
+command line.  The \fB-q\fR flag automatically turns on the \fB-u\fR
+flag to look at only those files owned by the user.
+.TP
+.BI \-u "[uid|name]"
+With no argument, will look at only those files owned by the user.
+An optional numeric uid argument will look at only those files owned
+by that uid.  An argument beginning with an alphabetic character is
+assumed to be a user name, and is converted to a uid restriction.
+Note that with \fB-u\fR in effect, all searchable directories are still
+examined, regardless of ownership.
+.TP
+.B \-x
+Restrict the search to the file system containing the directory
+specified.
+.TP
+.B \-v
+Be verbose; shows all directory names as they are being searched.
+.TP
+.I directory
+Start the search in \fIdirectory\fR; ignored if used with the \fB\-q\fR
+flag.
+.SH NOTES
+If the command is interrupted with a keyboard-interrupt (usually control-C),
+it will display the \fInum\fR largest files found up to that point,
+and then prompt to continue.  A ``y'' will continue the search;
+a ``v'' will toggle the state of verboseness; any other character will
+terminate the program.
+.SH AUTHOR
+Phil Spector
