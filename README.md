@@ -1,8 +1,6 @@
-# bigfiles(1)
+# bigfiles
 
-# Name 
-
-bigfiles - find big files in a directory
+Find big files in a directory.
 
 # Synopsis
 
