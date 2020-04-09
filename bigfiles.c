@@ -1,6 +1,6 @@
 /* bigfiles - find big files in a directory
  *
- * Author: Phil Spector (spector@stat.Berkeley.EDU)
+ * Author: Phil Spector <spector@stat.berkeley.edu>
  *	    
  * Usage: bigfiles [ -nNUMBER ] [ -dDAYS ] [ -q ] [ -v ] [ -x ] [ directory ]
  *
